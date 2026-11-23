@@ -1,0 +1,232 @@
+Tech Mock — Business/Data Analytics
+Nov 22, 2026 at 12:37 PM ET
+
+--- TRANSCRIPT ---
+
+[12:03 PM ET] AI Interviewer: Hi! I'm your AI interviewer for the Tech Mock — Business/Data Analytics. This is a required interview for your Career Sprint, and I'll ask you a set of questions one at a time. Take your time. Are you ready to begin?
+
+[12:03 PM ET] You: Yes.
+
+[12:03 PM ET] AI Interviewer: Great. Here's your first question.
+
+Given a table of sales data with columns SaleID, ProductID, Region, and SaleAmount, how would you write a SQL query to find the top five products by total sales amount in each region?
+
+[12:05 PM ET] You: Okay. Um, first of all, um, listen to the question. We need to find the top five product by total sale amount with-- in each region. My f- let-- I will put, um... That means group of sale by region and product ID. So, first I will calc- I will group by sale and product ID. Then secondly, I will calculate the total sale for each product i- in each region using SUM, using the function SUM sale amount. And thirdly, I will rank, I will rank the, the product within region, within each region using ROW, ROW_number() or RANK functions. And then, uh, lastly, I'll return the top five product ineach region.
+
+[12:05 PM ET] AI Interviewer: Thank you. Can you walk me through what the actual SQL query would look like? Even roughly, what clauses and functions would you write out?
+
+[12:06 PM ET] You: Yeah, absolutely. So first, in an interview, uh, first, calculate total sale for each project in each region, uh, using, uh, the SQL will be like, "With product sale as select region, product_ID, sum, uh, sum of the sale, sum sale amount as total sale from sale group by regionand product ID." That's the first one. The next one, I will rank the product within each region. So my SQL will be, "Rank product as parentheses select region, product ID, total of sale, total sales, row number over partition by region, order by total sale descending."
+
+[12:06 PM ET] AI Interviewer: Got...
+
+[12:06 PM ET] You: Of course, I did.
+
+[12:06 PM ET] AI Interviewer: ...
+
+[12:07 PM ET] You: Close parenthesis, "SELECT RANK FROM product sale." And finally, "SELECT the top five product, uh, using, uh, select the top five product using, um, uh, the WHERE, the WHERE clause and ORDER BY region and sale rank."
+
+[12:07 PM ET] AI Interviewer: Thank you. You mentioned using ROW_NUMBER with PARTITION BY region — can you explain why partitioning by region specifically is the key step for getting the top five per region, rather than just overall?
+
+[12:07 PM ET] You: ...
+
+[12:07 PM ET] AI Interviewer: Take your time. Would you like me to repeat the question?
+
+[12:07 PM ET] You: Uh, yes, please.
+
+[12:07 PM ET] AI Interviewer: Sure. You mentioned using ROW_NUMBER with PARTITION BY region — can you explain why partitioning by region specifically is the key step for getting the top five per region, rather than just overall?
+
+[12:07 PM ET] You: ...
+
+[12:07 PM ET] AI Interviewer: No rush. Take a moment if you need it.
+
+[12:07 PM ET] You: Okay.
+
+[12:07 PM ET] AI Interviewer: Whenever you're ready.
+
+[12:08 PM ET] You: Partition, partition by, partition by is important because it reset the ranking for each region, ensuring that we get to the top five product independently within every region, rather than ranking all, rather than ranking all together.
+
+[12:08 PM ET] AI Interviewer: Got it. Alright, shifting gears a little — imagine you've just completed a significant data analysis project. How would you go about presenting your findings and recommendations to a senior leadership team who has limited time and a high-level focus?
+
+[12:09 PM ET] You: First, first, I will, first, I will start with an executive summary highlighting the main finding, the business problem, and why the analysis matter. Second, I will use simple visu- simple visualization, such as chart and dashboard, to communicate important trend, patterns, and key performance indicator, rather than overwhelming them with technical details.Third, I will explain the business im- the, the business impact of the finding, including potential opportunities, risk, cost saving, cost saving, or areas where performance could, could improve. And finally, I will provide practical, data-driven recommendation and, uh, prioritize them based on the potential impact and outline clear next steps. I would love... Uh.
+
+[12:09 PM ET] AI Interviewer: Thank you. You mentioned starting with an executive summary — can you walk me through a specific time you actually presented findings to a senior or non-technical audience, and how that went?
+
+[12:11 PM ET] You: In one of my, in one of my data analysis project, I had to present my finding to an audience that was not very familiar with technical analysis. I started by preparing a short executive summary highlighting the main finding and what they mean for the business. Instead of focusing on technical detail, I used simple chart and visualization to explain the trend and patterns I had identified.I also explained how the finding could help improve efficiency and support better decision-making. I made sure to connect every recommendation to data so that my conclusion were clear and easy to understand. The presentation went well because the audience was able to understand the key insight, ask relevant question, and discuss possible next steps. That experiencetaught me the importance of communicating data in a simple, clear, and practical way, especially when presenting to non-technical stakeholder.
+
+[12:11 PM ET] AI Interviewer: Thank you. Now, when designing a dashboard for business users, what are some key principles you consider to ensure it's both informative and user-friendly? I'd like to hear at least three examples.
+
+[12:14 PM ET] You: When, when designing a dashboard for business user, I focus on making it simple, clear, and actionable. The goal is to help user to, to, user understand important information quickly and make information, and make informed decision. I will consider at least five, at least these five, these five recommendation. Keep it simple and easy to navigate, which mean I avoid overcrowdingthe dashboard with too much information and organize the lay- the layout logically so user can quickly find the information they need. Secondly, focus on relevant KPIs, which mean including key performance indicator that align with business goal, such as revenues, sales growth, customer retent- re- retention, and operational per- formance. This ensure user focus on what matter the most. Thirdly, use, I will use clear visualization. I... Which, w- w- what that mean, I choose appropriate chart and graph to communicate information effi- effectively. For example, bar chart for comparing sales across region and line chart for tracking trend over the time.Fourth, make the dash... I will make the dashboard in- interactive and include, which mean including use- useful filter such as date ranges, regions, and product categories so user can explore the data based on their need. And lastly, and I will ensure the accuracy and consistency by verifying that the data is accurateand regularly update- updated. I also maintain consistent color, label, and formatting throughout the dashboard.
+
+[12:14 PM ET] AI Interviewer: Thank you. You mentioned choosing appropriate chart types — can you give me a specific example of a time you had to decide between different visualization types for a particular dataset, and what drove your decision?
+
+[12:14 PM ET] You: Here is my example you can use in a data analyst interview.
+
+[12:14 PM ET] AI Interviewer: Take your time and walk me through that specific example — what was the dataset, what options did you consider, and what did you end up choosing and why?
+
+[12:16 PM ET] You: In, in one of my data analysis, I was working with sales data across different region and needed to present the result in a way that will be easy for business stakeholders to understand. So, I consider using a pie chart, bar chart, and line chart. I choose a bar chart because my main objective was to compare sales performance across different region.And identify which region were performing good. Secondly, I choose bar, a bar chart made... I choose a bar chart which made diff- which made those differences easy to see at a glance. If I had wanted to show how sales change over several month, I would have chosen a line, a line chart instead. My decision was driven, wasdriven by the type of data, the message I wanted to communicate, and the need, and the need of the audience. This experience reinforce the importance of choosing visualization of... visualization that make data easier to understand and support better decision-making.
+
+[12:16 PM ET] AI Interviewer: Got it. Let's turn to data modeling. Can you describe the concept of a star schema — what its main components are, and what the benefits of using it for analytical reporting would be?
+
+[12:16 PM ET] You: ...
+
+[12:16 PM ET] AI Interviewer: Take your time. Would you like me to repeat the question?
+
+[12:16 PM ET] You: Absolutely.
+
+[12:16 PM ET] AI Interviewer: Sure. Can you describe the concept of a star schema in data modeling — what its main components are, and what the benefits of using it for analytical reporting would be?
+
+[12:17 PM ET] You: Okay. It... A star, a star schema is a data modeling technique commonly used in data warehousing and business intelligence to organize data in a way that make reporting and, and analy- that make reporting and analysis, analysis easier. In a, in a star schema, there are two main components. We have a fact table. We have a fact table as first. As first, we have a fact table that containmeasurable business data, such as sale amount, quantity sold, revenue, and profit. And we got... And then we got... And secondly, we got dif- dimension tables that provide descriptive information that help us understand and analyze the fact. For example, product dimension... Yes.
+
+[12:17 PM ET] AI Interviewer: Take your time.
+
+[12:18 PM ET] You: I'm done.
+
+[12:18 PM ET] AI Interviewer: Thank you. You mentioned dimension tables providing descriptive context for the fact table — can you explain what the benefits of this structure are specifically for analytical reporting?
+
+[12:18 PM ET] You: ...
+
+[12:18 PM ET] AI Interviewer: ...
+
+[12:19 PM ET] You: Absolutely. Yes, absolutely. Absolutely. The biggest benefit of separating fact table and dimension table is that it's make ana- ana- analytical reporting more organized, flexible, and easier to understand. I will, I will highlight it with four benefit. The first benefit is easier data analy- easier... is easy to... easier data analysis. Dimension table providecontext to the number in the fact table. It's also faster and simpler reporting. Thirdly, flexible business insight, and lastly, consistent, consistent reporting.
+
+[12:19 PM ET] AI Interviewer: Thank you. Now, thinking about spreadsheets — you have a spreadsheet with customer order data, including customer IDs and product IDs, and a separate sheet with product details like product ID, product name, and price. How would you use a common spreadsheet function to bring the product names and prices into your customer order data sheet?
+
+[12:19 PM ET] You: ...
+
+[12:19 PM ET] AI Interviewer: Take your time. Would you like me to repeat the question?
+
+[12:19 PM ET] You: Uh, no.
+
+[12:19 PM ET] AI Interviewer: Whenever you're ready.
+
+[12:20 PM ET] You: I will, I will use, I will use V, VLOOKUP to retrieve the product name and price from the, from the product detail sheet into the customer order sheet. Here is my approach. First, I identify the common, the common column. Second, I will retrieve the product names. Third, retrieve, I will retrieve the, the product, the product price.And fourth, I will apply the formula.
+
+[12:20 PM ET] AI Interviewer: Thank you. Can you walk me through what that VLOOKUP formula would actually look like — what arguments you'd pass in and what each one does?
+
+[12:20 PM ET] You: ...
+
+[12:20 PM ET] AI Interviewer: Take your time.
+
+[12:21 PM ET] You: Yeah, uh, absolutely. Let's break it down. I, I will break it down, the VLOOKUP formula argument by argument. The actual formula is V, VLOOKUP, B, and parenthesis, the column, uh, the column name, product, uh, comma, product details,
+
+[12:21 PM ET] AI Interviewer: Take your time.
+
+[12:21 PM ET] You: ...
+
+[12:21 PM ET] AI Interviewer: Would you like a moment to gather your thoughts, or shall I move on?
+
+[12:21 PM ET] You: Yes, please. I would like a moment to gather my thought.
+
+[12:21 PM ET] AI Interviewer: Of course, take your time.
+
+[12:21 PM ET] You: ...
+
+[12:21 PM ET] AI Interviewer: Whenever you're ready.
+
+[12:22 PM ET] You: Okay. So, okay, the actual formula... I'm ready. So the actual formula with, will be, uh, V, uh, the, the, the sign equals first, then VLOOKUP, parenthesis, lookup_value, comma, table_array, comma, col- column, uh, the index_column,and the, uh, comma, and then the, uh, square bracket, and the range_lookup. That's how the, that's how the formula of VLOOKUP look like.
+
+[12:22 PM ET] AI Interviewer: Got it. Now, explain the difference between an INNER JOIN and a LEFT JOIN in SQL. And give me a simple scenario where you would choose one over the other.
+
+[12:23 PM ET] You: The main difference between an INNER JOIN, between an INNER JOIN and a LEFT JOIN is which record they return when the two table are combined. Firstly, you know, the in- the INNER JOIN return only record that have matching value in both tables. Um, the LEFT JOIN return, the LEFT JOIN return all record from the left table, even if there is no matching record in the righttable. S- uh, depending, depending on the, depending on the solution, I will choose one or each other.
+
+[12:23 PM ET] AI Interviewer: Thank you. You mentioned choosing one depending on the situation — can you give me a specific scenario where you would use a LEFT JOIN rather than an INNER JOIN, and why?
+
+[12:23 PM ET] You: Okay. Um, yes.
+
+[12:23 PM ET] AI Interviewer: Take your time.
+
+[12:24 PM ET] You: I will, I will use a left join when I need to retain all record from my primary table, even when there are table... even when there are no matching record in the second table. For example, if I wanted to identify customer who register but never made a purchase, I will join the customer table to the other table using left join. This will allow me to identify customer with no order.
+
+[12:24 PM ET] AI Interviewer: Good. Now, tell me about a time you had to deliver bad news or explain a complex technical issue to a non-technical stakeholder. How did you approach that conversation?
+
+[12:25 PM ET] You: ...
+
+[12:25 PM ET] AI Interviewer: Take your time. Would you like me to repeat the question?
+
+[12:25 PM ET] You: Mm.
+
+[12:25 PM ET] AI Interviewer: ...
+
+[12:26 PM ET] You: No. Okay, so in one situation, I was working on a data analysis task and discovered that some of the information in the dataset was incomplete and inconsistent. This affected the accuracy of the result, so I knew I couldn't simply present the finding as if everything was correct. I approached the stakeholder professionally and explained theissue in a simple, non-technical language rather than focusing on technical details. I explained how the data quality problem could affect the business decision being made. I also presented possible solution, including reviewing the missing information, cleaning the dataset, and validating the result before sharing the final report. I made sure to communicate transparently about the potential delay and provide an updatetimeline, an updated timeline. The stakeholder appreciated the honesty and the fact that I came with solution rather than just presenting a problem. That experience told- taught me that effective communication is not just about sharing good result, it's also about being transparent, managing expectation, and build trust.
+
+[12:26 PM ET] AI Interviewer: Thank you. You mentioned coming with solutions rather than just the problem — in that specific situation, how did the stakeholder respond when you first broke the news, and what did you do to keep the conversation constructive?
+
+[12:27 PM ET] You: They, uh...
+
+[12:27 PM ET] AI Interviewer: Take your time.
+
+[12:27 PM ET] You: Can you repeat the question for me, please?
+
+[12:27 PM ET] AI Interviewer: Of course. In that specific situation you described, how did the stakeholder respond when you first broke the news about the data quality issue, and what did you do to keep the conversation constructive?
+
+[12:28 PM ET] You: The stakeholder was, was initially concerned because the data analysis was important for an upcoming business decision, and incomplete information could affect accuracy of result. Uh, so I understood their concern, so I remained calm and focused on explaining the situation, the situation clearly. I showed them which part of the data were incomplete, explained the potential impact,and avoided using complicated technical language.
+
+[12:28 PM ET] AI Interviewer: Thank you...
+
+[12:28 PM ET] You: Who could I-
+
+[12:28 PM ET] AI Interviewer: Go ahead.
+
+[12:28 PM ET] You: I also kept the stakeholder informed about my progress so they knew what to expect. Ultimately, the conversation remained constructive because I was transparent, listening... I was transparent, and I was listening to their concern and focused on finding a solution. Uh, it reinforced the importance of building trust through honest communication and taking responsibility for delivering reliable results.
+
+[12:28 PM ET] AI Interviewer: Thank you. Now, thinking about SQL again — you have a table named Orders with columns OrderID, CustomerID, OrderDate, and TotalAmount. How would you write a SQL query to find the total revenue generated by each customer for orders placed in the last month?
+
+[12:29 PM ET] You: ...
+
+[12:29 PM ET] AI Interviewer: Take your time.
+
+[12:29 PM ET] You: Okay. So, um, first, I will calculate the total, the total revenue used sum, the SUM function. Secondly, I will group by customer using the GROUP BY clauses. Thirdly, I will filter the order from last month using the WHERE, the WHERE, uh, the WHERE clause.
+
+[12:29 PM ET] AI Interviewer: ...
+
+[12:29 PM ET] You: To include only order, to include only order placed last month.
+
+[12:29 PM ET] AI Interviewer: Thank you. Can you walk me through what that actual SQL query would look like, with the specific clauses and functions written out?
+
+[12:30 PM ET] You: ...
+
+[12:30 PM ET] AI Interviewer: Take your time.
+
+[12:31 PM ET] You: Okay. So, the select clause, the select clause retrieve the customer ID and total revenue. The s- the sum, the sum, the sum, it add together all, all order for each customer from, from, from order specified table, containing data, where, where clauses filterorder to include only those from last calendar month, grouped by customer ID, calculate revenue separately for each customer, and order by total revenue in descending sort, customer from the highest to the lowest revenue.
+
+[12:31 PM ET] AI Interviewer: Thank you. Can you write out the actual SQL syntax — the specific keywords, function calls, and conditions you would use, even roughly?
+
+[12:31 PM ET] You: Um...
+
+[12:31 PM ET] AI Interviewer: Take your time.
+
+[12:31 PM ET] You: Yes, I can write. Where, where can I write it?
+
+[12:31 PM ET] AI Interviewer: Just speak it out loud — walk me through the query as if you were typing it.
+
+[12:32 PM ET] You: Okay. So I will do select customer ID, sum, sum total amount as total revenue from order, which is a table from the, from order, where order_date is b- is better than date, is better than date_format, parenthesis, current date_... no, current_date -uh, minus interval one month, close parenthesis, and order_date less than date_format, date_format, open parenthesis, current, current_date, year, month, and day, close parenthesis, group by customer ID, order by total revenue, desc, D-E-S-C.
+
+[12:32 PM ET] AI Interviewer: Got it. Alright, next — you have a table named Employees with columns EmployeeID, Name, DepartmentID, and Salary. You want to categorize employees into High Salary for salary greater than seventy thousand dollars, Medium Salary for salary between forty thousand and seventy thousand dollars, and Low Salary for salary forty thousand dollars or below. How would you achieve this using a SQL CASE statement?
+
+[12:33 PM ET] You: ...
+
+[12:33 PM ET] AI Interviewer: Take your time.
+
+[12:33 PM ET] You: Great question. This is where we use the SQL, the SQL, Q- the SQL, Q- Q statement to, to create categories by specific salary condition. The... First, the actual s-
+
+[12:33 PM ET] AI Interviewer: Take your time.
+
+[12:35 PM ET] You: For the askware-- the, the actual SQL query, select employee ID, name, department ID, salary, case where, when salary greater than 70,000, then high sale. When salary greater than 40,000 and salary less than 70,000, then medium sales. And when the salary is less than 40,000, then low sales.And as salary category from employees. How the case work? The when salary categorize, the when salary sup- uh, greater than 70,000 categorize the employee as high s- high salary. The, uh, when salary is between 40,000 and 70,000, categorize this employee asmedium salary. And s- when salary is less than 40,000, categorize employee as low salary.
+
+[12:35 PM ET] AI Interviewer: Thank you. And finally, you need to visualize the trend of website traffic over the past year, broken down by acquisition channel — for example, organic, paid, and direct. What type of visualization would you choose, and why?
+
+[12:35 PM ET] You: Can you, can you repeat that question again for me, please?
+
+[12:35 PM ET] AI Interviewer: Of course. You need to visualize the trend of website traffic over the past year, broken down by acquisition channel — for example, organic, paid, and direct. What type of visualization would you choose, and why?
+
+[12:36 PM ET] You: Mm, I would choose a multi s- a m- a multi series line chart because it is ideal for showing changes in website traffic over time while comparing multiple acquisition channels.
+
+[12:36 PM ET] AI Interviewer: Thank you. You mentioned it's ideal for showing changes over time — can you walk me through why a line chart specifically works better here than, say, a bar chart or a stacked area chart for this particular dataset?
+
+[12:36 PM ET] You: ...
+
+[12:36 PM ET] AI Interviewer: Take your time.
+
+[12:37 PM ET] You: I will choose... I will choose interviewer answer. I will choose, uh, I will choose multiple series line chart because the primary objective is to understand website traffic trend over time and compare the performance of different acquisition channel. A bar chart would be useful for comparing individual monthly values, while a stacked area chart would help illustrate eachchannel's contribution to total traffic. However, the line chart provide the clearest view of how each channel is performing over 12-month periods.
+
+[12:37 PM ET] AI Interviewer: Thank you. That brings us to the end of the interview. I really appreciate the time and effort you put into your answers today. This interview is now complete and your responses will be scored. Best of luck with the rest of your programme!
